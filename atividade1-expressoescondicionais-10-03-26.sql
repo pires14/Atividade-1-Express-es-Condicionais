@@ -36,12 +36,13 @@ tabela_de_produtos where codigo_do_produto = 1022450;
 
 #Questão 5:
 
-#Quem é o cliente que comprou 84 produtos com o número de código igual a 1101035, 
-#cujo número da nota fiscal foi 102?
-#Quem foi o vendedor ou vendedora responsável e qual o nome do produto e seu sabor? 
-#Gere o Diagrama de Entidade - Relacionamento para melhor compreensão.
-
 select cpf, numero from notas_fiscais where numero = 102;
 select nome from tabela_de_clientes where cpf = 8502682733;
+select * from notas_fiscais where numero = 102 and cpf = 8502682733;
+select * from tabela_de_vendedores where matricula = 00236;
+select * from notas_fiscais where numero = 102 and cpf = 8502682733 and matricula = 00236;
+select * from tabela_de_produtos where CODIGO_DO_PRODUTO = 1101035;
 
-#O cliente é o Valdeci da Silva.
+#O cliente é o Valdeci da Silva. A vendedora responsável foi a Cláudia Morais. 
+#O nome do produto é "Linha Refrescante - 1 Litro - Morango/Limão" 
+#e o sabor é "Morango/Limão".
